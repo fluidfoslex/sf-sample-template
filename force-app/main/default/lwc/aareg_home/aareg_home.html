@@ -1,0 +1,91 @@
+<template>
+  <template if:true={isLoaded}>
+    <div if:true={showError} class="error-dropdown" onclick={closeErrorMessage}>
+      <div class="empty-flex"></div>
+      <div class="error-message" aria-live="assertive" aria-atomic="true">
+        <h2>
+          {errorMsg}
+        </h2>  
+      </div>
+      <div class="close-error-button">
+        <lightning-icon icon-name="utility:close" variant="inverse" onclick={closeErrorMessage} style="padding-right: 1rem; cursor: pointer"></lightning-icon>
+      </div>
+    </div>
+    <div class="home-container bedriftsmeny">
+      <div style="flex: 1;"></div>
+      <div class="home_header">
+        <h1 class="typo-innholdstittel bedriftsmeny__tittel">
+          Min side - Brukerstøtte og søknad om tilgang til Aa-registeret
+        </h1>
+      </div>
+      <div class="org_picker">
+        <template if:true={organizations}>
+          <select class="organization-select" aria-invalid="false" onchange={handleOrganizationChange}>
+            <option if:false={hasPreviouslySelectedOrganization} value="">-- Velg virksomhet --</option>
+            <template for:each={organizations} for:item="organization">
+              <option key={organization.OrganizationNumber} value={organization.OrganizationNumber}>
+                <div>
+                  <p>{organization.Name}- ({organization.OrganizationNumber})</p>
+                </div>
+              </option>
+            </template>
+          </select>
+        </template>
+      </div>
+    </div>
+    <template if:true={hasAccess}>
+      <div class="slds-grid inner-container">
+        <div class="slds-col" style="flex: 50%">
+          <div if:true={hasApplicationAccess} class="slds-col">
+            <c-link-panel
+              title="Ny søknad"
+              sub-title="Her kan du opprette en ny søknad."
+              relative-path="custom_ny_soknad_aa_registret__c"
+              style="display: flex; width: 100%"
+            ></c-link-panel>
+          </div>
+          <div if:true={hasApplicationAccess} class="slds-col">
+            <c-link-panel
+              title="Mine søknader"
+              sub-title="Her finner du en oversikt over dine søknader."
+              relative-path="custom_mine_soknader__c"
+              style="display: flex; width: 100%"
+            ></c-link-panel>
+          </div>
+          <div class="slds-col">
+            <c-link-panel
+              title="Mine avtaler"
+              sub-title="Her finner du oversikt over vedtak (avtaler) om tilgang og tilhørende kontaktpersoner. Du kan også avslutte avtale eller opphøre tilgangstype, samt endre kontaktpersoner på denne siden."
+              relative-path="Mine_Avtaler__c"
+              style="display: flex; width: 100%"
+            ></c-link-panel>
+          </div>
+        </div>
+        <div class="slds-col" style="flex: 50%">
+          <div class="slds-col">
+            <c-link-panel
+              title="Brukerstøtte vedrørende Aa-registeret"
+              sub-title="Har du spørsmål knyttet til Aa-registeret kan du kontakte oss ved å sende en melding."
+              relative-path="Ny_Melding__c"
+              style="display: flex; width: 100%"
+            ></c-link-panel>
+          </div>
+          <div class="slds-col">
+            <c-link-panel
+              title="Mine meldinger"
+              sub-title="Her finner du svar på henvendelser som du har sendt vedrørende Aa-registeret."
+              relative-path="Mine_Meldinger__c"
+              style="display: flex; width: 100%"
+            ></c-link-panel>
+          </div>
+        </div>
+      </div>
+    </template>
+    <template if:false={hasAccess}>
+      <c-aareg_missing-access></c-aareg_missing-access>
+    </template>
+  </template>
+  <template if:false={isLoaded}>
+    <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+  </template>
+</template>
