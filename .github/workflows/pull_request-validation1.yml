@@ -6,7 +6,7 @@ on:
 jobs:
   run-pr-validation:
     name: Validate PR
-    uses: fluidfoslex/sf-workflows/blob/main/.github/workflows/validate.yml
+    uses: fluidfoslex/sf-workflows/blob/main/.github/workflows/validate.yml@master
     permissions:
       contents: read
     secrets: inherit
