@@ -7,7 +7,7 @@
 
 # Intro
 
-This workflows is automatically executed whenever a PR is merged into master (or main branch). It does the following:
+This workflows is automatically executed whenever a PR is merged into main (or main branch). It does the following:
 
 - Create an unlocked package
 - Installs the new package into dev environments

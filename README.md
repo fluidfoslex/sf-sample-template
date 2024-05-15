@@ -4,7 +4,7 @@ Denne pakken inneholder Salesforce metadata som støtter arbeidet NAV gjør rund
 
 ## Avhengigheter
 
-Pakken har flere avhengigheter. Sjekk [sfdx-project.json](https://github.com/navikt/crm-arbeidsforhold/blob/master/sfdx-project.json) filen for å se en oversikt over alle avhengigheter.
+Pakken har flere avhengigheter. Sjekk [sfdx-project.json](https://github.com/navikt/crm-arbeidsforhold/blob/main/sfdx-project.json) filen for å se en oversikt over alle avhengigheter.
 
 ## Komme i gang
 

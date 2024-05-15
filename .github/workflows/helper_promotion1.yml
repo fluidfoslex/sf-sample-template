@@ -20,7 +20,7 @@ jobs:
 
   run-package-promotion:
     name: Promote Package
-    uses: fluidfoslex/sf-workflows/.github/workflows/packagePromotion.yml@master
+    uses: fluidfoslex/sf-workflows/.github/workflows/packagePromotion.yml@main
     permissions:
       contents: write
       pull-requests: write

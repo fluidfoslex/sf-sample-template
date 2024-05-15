@@ -30,9 +30,9 @@ This workflows does the following:
     - Basic `sfdx force:package:version:promote`
 - Install Package in Preprod (`install-package-preprod`)
     - Basic `sfdx force:package:install`
-- Push new version number to master (`push-new-version-number-to-master`)
+- Push new version number to main (`push-new-version-number-to-main`)
     - Uses [navikt/github-action-sfdx-version-updater](https://github.com/navikt/github-action-sfdx-version-updater) (GitHub Actions plugin) to update the version number in `sfdx-project.json` (e.g., 1.7.0 => 1.8.0)
-    - Creates a pull request that is instantly merged (to avoid GitHub which blocks pushing to master)
+    - Creates a pull request that is instantly merged (to avoid GitHub which blocks pushing to main)
     - Needs a GitHub personal access token from an admin to merge (see secrets below)
 - Create GitHub Release (`create-release`)
     - Contains the version number, package ID, code coverage, changelog, author and basic description of changes
