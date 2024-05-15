@@ -7,7 +7,7 @@ on:
 jobs:
   create-scratch-org:
     name: Create Scratch Org
-    uses: fluidfoslex/sf-workflows/.github/workflows/createScratchOrg.yml@master
+    uses: fluidfoslex/sf-workflows/.github/workflows/createScratchOrg.yml@main
     with:
       branchName: ${{ github.event.inputs.branchName }}
     secrets: inherit

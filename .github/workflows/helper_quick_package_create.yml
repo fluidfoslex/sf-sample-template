@@ -14,7 +14,7 @@ jobs:
 
   quick-package-create:
     name: Quick Create Package
-    uses: fluidfoslex/sf-workflows/.github/workflows/quickPackageCreate.yml@master
+    uses: fluidfoslex/sf-workflows/.github/workflows/quickPackageCreate.yml@main
     permissions:
       contents: write
     secrets: inherit
