@@ -7,34 +7,34 @@ import CURRENT_USER_ID from '@salesforce/user/Id';
 import ID_FIELD from '@salesforce/schema/Case.Id';
 
 export default class caseAssignToMe extends LightningElement {
-    @api recordId;
+  @api recordId;
 
-    onButtonClick(event) {
-        this.handleSetOwner();
-    }
+  onButtonClick(event) {
+    this.handleSetOwner();
+  }
 
-    handleSetOwner() {
-        const fields = {};
-        fields[OWNER_FIELD.fieldApiName] = CURRENT_USER_ID;
-        fields[ID_FIELD.fieldApiName] = this.recordId;
+  handleSetOwner() {
+    const fields = {};
+    fields[OWNER_FIELD.fieldApiName] = CURRENT_USER_ID;
+    fields[ID_FIELD.fieldApiName] = this.recordId;
 
-        const recordInput = {
-            fields: fields
-        };
+    const recordInput = {
+      fields: fields
+    };
 
-        updateRecord(recordInput)
-            .then(() => {
-                // Refresh the record
-                getRecordNotifyChange([{ recordId: this.recordId }]);
-            })
-            .catch((error) => {
-                this.dispatchEvent(
-                    new ShowToastEvent({
-                        title: 'Error updating record',
-                        message: error.body.message,
-                        variant: 'error'
-                    })
-                );
-            });
-    }
+    updateRecord(recordInput)
+      .then(() => {
+        // Refresh the record
+        getRecordNotifyChange([{ recordId: this.recordId }]);
+      })
+      .catch((error) => {
+        this.dispatchEvent(
+          new ShowToastEvent({
+            title: 'Error updating record',
+            message: error.body.message,
+            variant: 'error'
+          })
+        );
+      });
+  }
 }
