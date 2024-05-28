@@ -125,3 +125,6 @@
 **/components/SitePoweredBy.component
 
 **/experiences
+
+#  Do not deploy org spesific metadata 
+src-env-specific
