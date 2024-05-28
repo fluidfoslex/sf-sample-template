@@ -1,0 +1,84 @@
+<template>
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    <div class="container">
+        <h1>Contact us!</h1>
+        <form
+            action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DWU000003qqxp"
+            method="POST"
+        >
+            <input type="hidden" name="orgid" value="00DWU000003qqxp" />
+            <input type="hidden" name="origin" value="Certas.no" />
+            <input
+                type="hidden"
+                name="retURL"
+                value="https://fluido166-dev-ed.develop.my.site.com/s/thank-you-screen"
+            />
+
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+            <!--  these lines if you wish to test in debug mode.                          -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail"                                  -->
+            <!--  value="philip.gausaker@fluidogroup.com">                                -->
+            <!--  ----------------------------------------------------------------------  -->
+            <div class="input-section">
+                <label for="name">Contact Name</label
+                ><input
+                    id="name"
+                    maxlength="80"
+                    name="name"
+                    size="20"
+                    type="text"
+                />
+            </div>
+            <div class="input-section">
+                <label for="email">Email</label
+                ><input
+                    id="email"
+                    maxlength="80"
+                    name="email"
+                    size="20"
+                    type="text"
+                />
+            </div>
+            <div class="input-section">
+                <label for="phone">Phone</label
+                ><input
+                    id="phone"
+                    maxlength="40"
+                    name="phone"
+                    size="20"
+                    type="text"
+                />
+            </div>
+            <div class="input-section">
+                <label for="subject">Subject</label
+                ><input
+                    id="subject"
+                    maxlength="80"
+                    name="subject"
+                    size="20"
+                    type="text"
+                />
+            </div>
+            <div class="input-section">
+                <label for="description">Description</label
+                ><textarea name="description"></textarea>
+            </div>
+            <div class="input-section">
+                <input type="hidden" id="external" name="external" value="1" />
+            </div>
+            <div class="submit-button-container">
+                <input class="submit-button" type="submit" name="submit" />
+            </div>
+        </form>
+    </div>
+</template>
