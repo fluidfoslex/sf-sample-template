@@ -1,0 +1,29 @@
+.container {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.emoji {
+  font-size: 80px;
+  animation: enter 2s ease-in-out;
+}
+
+.thank-you-text {
+  font-size: 26px;
+  animation: enter 1s ease-in-out;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,62 @@
+<template>
+    <div class="container">
+        <form
+            action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DWU000003qqxp"
+            method="POST"
+        >
+            <input type="hidden" name="orgid" value="00DWU000003qqxp" />
+            <input type="hidden" name="origin" value="Esso.no" />
+            <input
+                type="hidden"
+                name="retURL"
+                value="https://fluido166-dev-ed.develop.my.site.com/s/thank-you-screen"
+            />
+
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+            <!--  these lines if you wish to test in debug mode.                          -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail"                                  -->
+            <!--  value="philip.gausaker@fluidogroup.com">                                -->
+            <!--  ----------------------------------------------------------------------  -->
+
+            <h1>Kontakt oss!</h1>
+            <div class="input-container">
+                <label for="name">Kontakt navn</label
+                ><input id="name" maxlength="80" name="name" size="20" type="text" />
+            </div>
+            <div class="input-container">
+                <label for="email">Epost</label><input id="email" maxlength="80" name="email" size="20" type="text" />
+            </div>
+
+            <div class="input-container">
+                <label for="phone">Telefon</label><input id="phone" maxlength="40" name="phone" size="20" type="text" />
+            </div>
+            <div class="input-container">
+                <label for="reason">Kategori</label
+                ><select id="reason" name="reason">
+                    <option value="Kopi av kvittering">Kopi av kvittering</option>
+                    <option value="Esso stasjoner">Esso stasjoner</option>
+                    <option value="Esso Card - firmakort">Esso Card - firmakort</option>
+                    <option value="TRUMF hos Esso">TRUMF hos Esso</option>
+                    <option value="Esso MasterCard - kredittkort">Esso MasterCard - kredittkort</option>
+                    <option value="365Direkte - kredittkort">365Direkte - kredittkort</option>
+                    <option value="Annet">Annet</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="subject">Emne</label
+                ><input id="subject" maxlength="80" name="subject" size="20" type="text" />
+            </div>
+
+            <div class="input-container">
+                <label for="description">Beskrivelse</label><textarea name="description"></textarea>
+            </div>
+
+            <input type="hidden" id="external" name="external" value="1" /><br />
+            <div class="submit-button-container">
+                <input class="submit-button" type="submit" name="submit" value="Send" />
+            </div>
+        </form>
+    </div>
+</template>
