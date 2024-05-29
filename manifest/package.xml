@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>aboutUs</members>
-		<members>contactUsEsso</members>
-		<members>essoHeader</members>
-		<members>thankYouScreen</members>
-		<name>LightningComponentBundle</name>
+		<members>essoLogo</members>
+		<name>StaticResource</name>
 	</types>
 	<version>60.0</version>
 </Package>
