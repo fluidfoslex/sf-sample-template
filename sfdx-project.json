@@ -7,7 +7,14 @@
             "versionNumber": "0.2.0.NEXT",
             "default": true,
             "versionDescription": ""
-        }
+        },
+        {
+          "path": "exp-cloud",
+          "package": "experience-cloud",
+          "versionName": "ver 0.1",
+          "versionNumber": "0.1.0.NEXT",
+          "versionDescription": ""
+      }
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
