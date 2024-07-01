@@ -1,28 +1,28 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "package": "crm-template",
-      "versionName": "ver 0.3",
-      "versionNumber": "0.3.0.NEXT",
-      "default": true,
-      "versionDescription": ""
-    },
-    {
-      "path": "exp-cloud",
-      "package": "experience-cloud",
-      "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT",
-      "default": false,
-      "versionDescription": ""
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "package": "crm-template",
+            "versionName": "ver 0.3",
+            "versionNumber": "0.4.0.NEXT",
+            "default": true,
+            "versionDescription": ""
+        },
+        {
+            "path": "exp-cloud",
+            "package": "experience-cloud",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "versionDescription": ""
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "57.0",
+    "packageAliases": {
+        "crm-template": "0HoWU0000000BMr0AM",
+        "crm-template@0.1.0-1": "04tWU0000001TETYA2",
+        "experience-cloud": "0HoWU0000000Caf0AE"
     }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "57.0",
-  "packageAliases": {
-    "crm-template": "0HoWU0000000BMr0AM",
-    "crm-template@0.1.0-1": "04tWU0000001TETYA2",
-    "experience-cloud": "0HoWU0000000Caf0AE"
-  }
 }
