@@ -14,6 +14,10 @@
                 <behavior>Readonly</behavior>
                 <field>Parking_number__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Parking_width__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
